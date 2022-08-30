@@ -7,4 +7,4 @@ draft: true
 ---
 
 # Notion
-[Click here to see my Notion](https://cybery.notion.site/ysahbaz){:target="_blank" rel="noopener"}
+[Click here to see my Notion](https://ysahbaz.notion.site/){:target="_blank" rel="noopener"}
