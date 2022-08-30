@@ -3,7 +3,7 @@ layout: page
 title: Notion
 permalink: /notion/
 weight: 4
-draft: true
+draft: false
 ---
 
 # Notion
