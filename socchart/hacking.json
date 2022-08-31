@@ -32,18 +32,95 @@
                      
                   },
                   {
-                     "name":"Request phishing message screenshot and header, if the original email did not rrigger a Proofpoint."
-                     
-                  },
-                  {
+                     "children": [
+                        {
+                           "name":"Review idicators and email headers."
+                           
+                        },
+                        {
+                           "children": [
+                              {
+                                 "name":"IP, DOMAIN, EMAIL ADRESS ,ETC."
+                                 
+                              },
+                              {
+                                 "name":"MESSAGE BODY, LINK AND ATTACHMENT"
+                                 
+                              }
+                           ],
+                           "name":"Check actual sender information"
+                           
+                        },
+                        {
+                           "children": [
+                              {
+                                 "name":"CREDENTIAL HARVESTER."
+                                 
+                              },
+                              {
+                                 "name":"MALICIOUS DOWNLOADER."
+                                 
+                              }
+                           ],
+                           "name":"Determine purpose of attack"
+                           
+                        },
+                        {
+                           "name":"View proofpoint Sandbox info"
+                           
+                        }
+
+                     ],
                      "name":"Determines validity of the phish ( Malicius phishing compaign or etc."
                      
                   },
                   {
+                     "name":"Request phishing message screenshot and header, if the original email did not rrigger a Proofpoint."
+                     
+                  },
+                  {
+                     "children": [
+                        {
+                           "name":"How many users received the message?"
+                           
+                        },
+                        {
+                           "children": [
+                              {
+                                 "name":"If all recipients are not current employess, update and close IR ticket."
+                                 
+                              },
+                              {
+                                 "name":"If any recpipients are current employess, switch to Performs root-cause analysis. "
+                                 
+                              }
+                           ],
+                           "name":"Are all recipients current employees?"
+                           
+                        },
+                        {
+                           "name":"Did any users take inappropriate action?"
+                           
+                        },
+                        {
+                           "name":"Did data exfiltration/loss occur?"
+                           
+                        }
+                     ],
                      "name":"Determines scope of threat/risk to the organization."
                      
                   },
                   {
+                     "children": [
+                        {
+                           "name":"Enterprise Search "
+                           
+                        },
+                        {
+                           "name":"Siem log analysis to IP/Domain"
+                           
+                        }
+                     ],
                      "name":"Performs root-cause analysis."
                      
                   },
@@ -57,11 +134,30 @@
             {
                "children": [
                   {
-                     "name":"Research on the malware"
+                     "name":"Communicates with affected users and responding teams."
                      
                   },
                   {
-                     "name":"Identify the Source of the malware"
+                     "name":"Contains infected hosts in EDR"
+                     
+                  },
+                  {
+                     "name":"Intiates password reset request in SOAR as jira."
+                     
+                  },
+                  {
+                     "children": [
+                        {
+                           "name":"Block in exchange server"
+                           
+                        },
+                        {
+                           "name":"Create ' Domain block request ' om SOAR and email to network team referencing the ticket number."
+                           
+                        }
+                     ],
+               
+                     "name":"Block malicious links and domains."
                      
                   }
                ],
@@ -70,11 +166,15 @@
             {
                "children": [
                   {
-                     "name":"Research on the malware"
+                     "name":"Block sender in EXchange server. or email security solution."
                      
                   },
                   {
-                     "name":"Identify the Source of the malware"
+                     "name":"Creates purge request ticket. ex: email the messagin team referencing the ticket number."
+                     
+                  },
+                  {
+                     "name":"If malicious file infected or opened with end user request creates reimage."
                      
                   }
                ],
@@ -83,24 +183,35 @@
             {
                "children": [
                   {
-                     "name":"Research on the malware"
+                     "children": [
+                        {
+                           "name":"Restoration of accounts and lost data from backups"
+                           
+                        },
+                        {
+                           "name":"Workstations/servers back online check"
+                           
+                        },
+                        {
+                           "name":"Systems/network hardening to prevent recurrence"
+                           
+                        }
+                     ],
+                     "name":"Verifies remediation of systems, data and accounts."
                      
                   },
                   {
-                     "name":"Identify the Source of the malware"
-                     
-                  }
-               ],
-               "name": "Eradication"
-            },
-            {
-               "children": [
-                  {
-                     "name":"Research on the malware"
-                     
-                  },
-                  {
-                     "name":"Identify the Source of the malware"
+                     "children": [
+                        {
+                           "name":"Close IR ticket"
+                           
+                        },
+                        {
+                           "name":"Update/modify policies if necessary."
+                           
+                        }
+                     ],
+                     "name":"Updates documentation."
                      
                   }
                ],
